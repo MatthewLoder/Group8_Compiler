@@ -1,7 +1,7 @@
 #ifndef LEXER_H_
 #define LEXER_H_
 
-enum TokenType {
+typedef enum {
   KEYWORD,     // Compiler specific word
   IDENT,       // Identifiers
   LITERAL,     // String literals
@@ -11,7 +11,7 @@ enum TokenType {
   SPECIAL,     // _ and &
   REMOVE,      // Whitespace and comments
   ILLEGAL,     // Unknown lexemes and illegal symbols
-};
+} TokenType;
 
 typedef struct {
   char *lexem;
