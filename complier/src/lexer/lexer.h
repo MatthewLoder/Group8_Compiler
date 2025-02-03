@@ -22,12 +22,12 @@ typedef struct {
 } Lexer;
 
 typedef struct {
-  char *lexem;
+  const char *lexem;
   TokenType token;
 } Token;
 
-// TODO: add input too nex_lexer
-void init_lexer(Lexer *lex, const char *input);
-void add_token(Lexer *lex, const char *token, const TokenType tt);
+Lexer *init_lexer(const char *input);
+Token *add_token(Lexer *lex, Token *token_table, const char *token,
+                 const TokenType tt);
 
 #endif
