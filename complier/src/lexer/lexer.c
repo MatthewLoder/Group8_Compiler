@@ -3,12 +3,12 @@
 #include "lexer.h"
 
 int main(int argc, char **argv) {
-  printf("Lexer Test");
+  printf("Lexer Test\n");
   isKeyword("test");
   return 0;
 }
 
 int isKeyword(const char *str) {
-  printf("test");
+  printf("%s\n", str);
   return 0;
 }

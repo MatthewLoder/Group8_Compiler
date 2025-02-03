@@ -21,6 +21,9 @@ $(OUT): $(SRC)
 clean:
 	rm -f $(OUT)
 
+run-lexer:
+	./bin/lexer
+
 # Phony Targets
 .PHONY: all clean
 
