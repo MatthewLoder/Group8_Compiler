@@ -14,17 +14,20 @@ typedef enum {
 } TokenType;
 
 typedef struct {
+  char *input;
+  int position;
+  int read_position;
+  int num_tokens;
+  unsigned int ch;
+} Lexer;
+
+typedef struct {
   char *lexem;
   TokenType token;
 } Token;
 
-int isKeyword(const char *str);
-int isIdent(const char *str);
-int isLiteral(const char *str);
-int isOperator(const char *str);
-int isPunctuation(const char *str);
-int isConstant(const char *str);
-int isSpecial(const char *str);
-int isRemove(const char *str);
+// TODO: add input too nex_lexer
+void init_lexer(Lexer *lex, const char *input);
+void add_token(Lexer *lex, const char *token, const TokenType tt);
 
 #endif
